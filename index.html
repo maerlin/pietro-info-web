@@ -7,8 +7,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="image/png" href="favicon.png" rel="shortcut icon" type="image/x-icon">
     <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                transform: translateY(-20%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        #presentation, #footer-container {
+            animation: fadeIn 0.75s ease-out;
+        }
+
+        #presentation, #footer-container {
+            animation: slideInFromTop 0.75s ease-out;
+        }
+
         html, body {
-            font-family: Helvetica, Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background: #fafafa;
             color: #666666;
             text-align: center;
@@ -66,8 +92,14 @@
             color: #aaa;
         }
 
-        a, a:visited, a:hover, a:active, a:focus {
+        a, a:visited {
             color: #F93507;
+            transition: color 0.3s ease;
+        }
+
+        a:hover, a:active, a:focus {
+            color: #bf2a07;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -88,6 +120,9 @@
                         <img class="contacts-img" src="email_square.png" alt="E-Mail">
                     </a>
                 </div>
+            </div>
+            <div>
+                IT Support for Micro and Small Businesses.
             </div>
         </div>
         <div id="footer-container">
